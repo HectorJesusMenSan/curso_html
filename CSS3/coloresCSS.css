@@ -1,0 +1,64 @@
+#palabraclave{
+    background-color:blue;
+    width: 150px;
+    height: 150px;
+
+    color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+#hexadecimal{
+    background-color: #ff5733 ;
+    color: #ba4a00;    
+    width: 150px;
+    height: 150px;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+#RGB{
+
+
+    background-color: blueviolet;
+    color: rgb(40, 55, 71 );
+    width: 150px;
+    height: 150px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+#color{
+    background-color: aqua; 
+    height: 150px;
+    width: 150px;
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    
+}
+#transparencia{
+    background-color: #ff000090;
+    text-align: center;
+    color: white;
+}
+#degradado{
+    color: #ff5733;
+    background: linear-gradient(190deg, blue, pink);
+
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
+}
