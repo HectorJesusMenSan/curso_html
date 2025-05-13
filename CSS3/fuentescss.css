@@ -1,0 +1,26 @@
+
+/*Asignar duentes de texto*/
+
+h2 {
+    font-family: 'Times New Roman', Times, serif';
+}
+
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/*fuentes descargadas*/
+@font-face {
+    font-family: "Shadows into light";
+    src: url(../assets/fonts/Shadows_Into_Light/ShadowsIntoLight-Regular.ttf);
+}
+
+h3{
+    font-family: 'Shadows into light'
+}
+
+i{
+    padding: 5px;
+}
