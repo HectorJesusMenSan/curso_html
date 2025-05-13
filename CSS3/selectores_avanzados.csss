@@ -1,0 +1,28 @@
+#contenedor p{
+	color: blue;
+	a{
+		color: white;
+		font-family: 'Times Hew Roman', Times, serif;
+		font-size: larger;
+		text-decoration: none;
+		background-color: black;
+		border-radius: 10px;
+		padding: 5px;
+	}
+
+}
+
+#contenedor p:first-child{
+	color: red;
+	font-family: Impact, Haettenscgweiler, 'Arial Narrow Bold', sans-serif ;
+	font-weight: 200;
+}
+
+#contenedor p:last-child{
+	color: green;
+}
+
+#contenedor p:nth-child(3){
+	background-color: yellow;
+	padding: 20px;
+}
