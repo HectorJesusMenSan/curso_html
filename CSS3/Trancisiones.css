@@ -1,0 +1,43 @@
+div{
+    width: 200px;
+    height: 200px;
+    margin: 70px;
+    float: left;
+}
+
+.elemento1{
+    background: blue;
+}
+
+.elemento1:hover{
+    transform: rotate(130deg);
+    background-color: aqua;
+    cursor: pointer;
+}
+
+.elemento-transicion{
+    background: greenyellow;
+    /*Propiedades de trancicion*/
+    transition-property: all;
+    transition-duration: 1s;
+    transition-delay: 300ms;
+    transition-timing-function: ease-out;
+}
+
+.elemento-transicion:hover{
+    background: tomato;
+    transform: rotate(130deg);
+    cursor: pointer;
+}
+
+.elemento-transicion-2{
+    background: #ff4949;
+    /*Propiedades con atajo*/
+    transition: all is ease-out 300ms;
+}
+
+.elemento-transicion-2:hover{
+    background: black;
+    transform: rotate(180deg);
+    cursor: pointer;
+}

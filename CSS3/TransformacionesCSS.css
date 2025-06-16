@@ -1,0 +1,26 @@
+div{
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+    float: left;
+}
+
+#trasladar{
+    background: red;
+    transform: translate(50px, 100px);
+}
+
+#escalar{
+    background: green;
+    transform: scaleY(3);
+}
+
+#rotar{
+    background: blue;
+    transform: rotate(120deg);
+}
+
+#deformar{
+    background: black;
+    transform: skew(30deg);
+}

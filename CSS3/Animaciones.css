@@ -1,0 +1,57 @@
+@keyframes cambiarcolor{
+    /*Animaciones para cambiar el color*/
+    0%{
+        background: forestgreen;
+    }
+    20%{
+        background: blue;
+    }
+    40%{
+        background: orange;
+    }
+    60%{
+        background: yellow;
+    }
+    80%{
+        background: purple;
+    }
+    100%{
+        background: red;
+    }
+}
+.ani{
+    width: 400px;
+    height: 400px;
+    background: gray;
+    margin: auto;
+    /*para la parte superior*/
+    margin-top: 50px;
+/*Propiedades de animacion*/
+    animation-name: cambiarcolor;
+    animation-duration: 10s;
+    animation-delay: 0.5;
+    /*normal de 0 a 100*/
+    animation-iteration-count: 2;
+    /*Que hara cunato termine la animacion, regresa al primer elemento*/
+    animation-fill-mode: backwards;
+    /*Estado de la animacion*/
+    animation-play-state: paused;
+
+}
+.ani:hover{
+    animation-play-state: running;
+    cursor: pointer;
+}
+.ani-atajo{
+    width: 500px;
+    height: 500px;
+    background: black;
+    margin: auto;
+    margin-top: 50px;
+    /*Propiedades de animacion*/
+    animation: cambiarcolor 10s 0.5ms infinite normal forwards paused;
+}
+.ani-atajo:hover{
+    animation-play-state: running;
+    cursor: pointer;
+}
