@@ -1,59 +1,74 @@
-/* Selecciona todos los elementos */
+/* =========================
+   RESET GENERAL
+   ========================= */
+
+/* Elimina margen y padding por defecto de todos los elementos y ajusta el box-sizing para que el padding y borde se incluyan en el tamaño total */
 * {
-    margin: 0;           /* Elimina margen predeterminado para todos los elementos */
-    padding: 0;          /* Elimina padding predeterminado para todos los elementos */
-    box-sizing: border-box; /* Hace que el padding y borde se incluyan dentro del tamaño total del elemento */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Estilos base para el body: fuente, altura de línea, color de texto y color de fondo */
 body {
-    font-family: Arial, sans-serif; /* Define la fuente de texto para toda la página */
-    line-height: 1.6;               /* Altura de línea para mejorar la legibilidad del texto */
-    color: #333;                    /* Color del texto en un gris oscuro */
-    background: white;              /* Color de fondo blanco para la página */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f9f9f9;
 }
 
-/*-------------------Barra de navegacion----------------------------*/
+/* =========================
+   BARRA DE NAVEGACIÓN (Navbar)
+   ========================= */
+
+/* Contenedor principal de la barra de navegación con flexbox, fondo negro, color blanco, padding y comportamiento sticky */
 .Barra_de_navegacion {
-    display: flex;
-    position: sticky;                   /* Activa flexbox para alinear hijos en fila */
-    justify-content: space-between; /* Distribuye los elementos hijos con espacio entre ellos */
-    align-items: center;             /* Centra verticalmente los elementos dentro de la barra */
-    padding: 1rem 2rem;              /* Espacio interno: 1 rem arriba/abajo, 2 rem izquierda/derecha */
-    background: black;               /* Fondo negro para la barra */
-    color: white;                   /* Texto blanco dentro de la barra */              /* Hace que la barra se quede fija en la parte superior al hacer scroll */
-    top: 0;                        /* Posiciona la barra en la parte superior de la ventana */
-    z-index: 1000;                 /* Prioridad alta para que quede encima de otros elementos */
+    display: flex;                         /* Coloca elementos en línea */
+    position: sticky;                      /* Fija la barra al hacer scroll */
+    justify-content: space-between;       /* Separa los elementos con espacio entre ellos */
+    align-items: center;                   /* Centra verticalmente los elementos */
+    padding: 1rem 2rem;                    /* Espaciado interno */
+    background: black;                     /* Fondo negro */
+    color: white;                         /* Texto blanco */
+    top: 0;                               /* Posición top para sticky */
+    z-index: 1000;                        /* Se mantiene arriba de otros elementos */
 }
 
-/* Estilo para el logo dentro de la barra de navegación */
+/* Estilo para el logo dentro de la barra: tamaño, peso de fuente, color y animación */
 .Barra_de_navegacion .logo {
-    font-size: 1.5rem;     /* Tamaño de fuente más grande para destacar el logo */
-    font-weight: bold;     /* Fuente en negrita */
-    color: whitesmoke;          /* Color blanco para el texto del logo */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: whitesmoke;
+    animation: slidelft 3s ease-out;
 }
 
-/* Estilo para la lista de botones dentro de la barra */
+/* Lista de botones en la barra: sin estilo de lista, flex, espacio entre botones y animación */
 .Barra_de_navegacion .botones {
-    list-style: none;      /* Quita los puntos o números de la lista */
-    color: white;          /* Color blanco para el texto */
-    display: flex;         /* Muestra los botones en línea (flex) */
-    gap: 1rem;             /* Espacio de 1 rem entre cada botón */
+    list-style: none;
+    color: white;
+    display: flex;
+    gap: 1rem;
+    animation: slidergh 2s ease-out;
 }
 
-/* Estilo para los enlaces dentro de los botones */
+/* Estilo para los enlaces dentro de los botones: sin subrayado, color blanco y transición para cambio de color */
 .botones a {
-    text-decoration: none;     /* Quita el subrayado de los enlaces */
-    color: white;              /* Color blanco por defecto */
-    transition: color 0.3s;    /* Animación suave al cambiar el color */
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
 }
 
-/* Cambio de color cuando pasas el cursor sobre los enlaces */
+/* Cambio de color al pasar el cursor sobre los enlaces */
 .botones a:hover {
-    color: aqua;               /* Cambia el color del texto a aqua */
+    color: aqua;
 }
 
+/* =========================
+   SECCIÓN HERO PRINCIPAL
+   ========================= */
 
-.hero-section{
+/* Contenedor principal del hero: centrado vertical y horizontal, altura de 90vh, fondo gris claro, texto centrado y animación */
+.hero-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,27 +78,30 @@ body {
     color: black;
     text-align: center;
     padding: 2rem;
+    animation: slideIn 3s ease-out;
 }
 
-.hero-section h1{
+/* Título principal del hero: tamaño grande y margen pequeño abajo */
+.hero-section h1 {
     font-size: 3.5rem;
     margin-bottom: 0.1rem;
     text-decoration: solid;
-    
 }
-.hero-section h3{
+
+/* Subtítulo del hero: color gris oscuro, margen inferior y decoración */
+.hero-section h3 {
     color: #5b5a5a;
     margin-bottom: 3rem;
     text-decoration: solid;
-    
 }
 
-.hero-section p{
+/* Párrafos dentro del hero: tamaño de fuente y margen inferior */
+.hero-section p {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    
 }
 
+/* Botón principal: fondo negro, texto blanco, padding, borde redondeado y transición para efectos hover */
 .btn-primary {
     background: black;
     color: white;
@@ -95,29 +113,40 @@ body {
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.6);
 }
 
-.btn-primary:hover{
+/* Efecto hover para el botón: cambio de fondo y elevación */
+.btn-primary:hover {
     background: #333;
     transform: translateY(-3px);
 }
 
-/*Seccion de tarjetas*/
-.cards-container{
+/* =========================
+   TARJETAS GENERALES
+   ========================= */
+
+/* Contenedor de tarjetas con padding y fondo claro */
+.cards-container {
     padding: 3rem;
     background: #f9f9f9;
 }
-.cards-container h2{
+
+/* Títulos dentro del contenedor de tarjetas: centrado, margen y tamaño */
+.cards-container h2 {
     text-align: center;
     margin-bottom: 2rem;
     font-size: 2.5rem;
     color: black;
 }
-.cards{
+
+/* Grid para mostrar tarjetas en columnas flexibles con espacio entre ellas */
+.cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
     padding-bottom: 3rem;
 }
-.card{
+
+/* Estilo general para cada tarjeta: fondo blanco, bordes redondeados, sombra y centrado del texto */
+.card {
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -127,69 +156,87 @@ body {
     color: black;
 }
 
-.card:hover{
+/* Efecto hover en tarjeta: escala un poco para dar sensación de zoom */
+.card:hover {
     transform: scale(1.05);
 }
 
-.card h3{
+/* Títulos dentro de tarjetas: margen y tamaño */
+.card h3 {
     margin: 1rem 0;
     font-size: 1.5rem;
 }
 
-.card p{
+/* Texto dentro de tarjetas con padding */
+.card p {
     padding: 0 1rem 1rem;
     font-size: 0.9rem;
 }
-/*Seccion de las cartas informativasc de la empresa*/
-.cards-informative{
+
+/* =========================
+   TARJETAS INFORMATIVAS
+   ========================= */
+
+/* Contenedor para tarjetas informativas con fondo blanco, margen grande, bordes redondeados y sombra */
+.cards-informative {
     background-color: white;
     margin: 5rem;
     border-radius: 5rem;
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
     transition: .3s all ease;
-    padding: 3rem
+    padding: 3rem;
+}
 
-    
-}
-.cards-informative:hover{
+/* Escala y flex-grow al hacer hover para dar énfasis */
+.cards-informative:hover {
     flex: 2;
-    transform: scale(1.1, 1.1 );
+    transform: scale(1.1, 1.1);
 }
-.cards-informative h2{
+
+/* Título de la sección informativa: centrado, tamaño y color */
+.cards-informative h2 {
     text-align: center;
     font-size: 2rem;
     color: black;
     padding: 0.5rem;
 }
-.cards-informative .cardDetxt{
+
+/* Contenido de texto dentro de la tarjeta informativa centrado y con color */
+.cards-informative .cardDetxt {
     align-items: center;
     text-align: center;
     color: black;
 }
 
-.cards-informative .cardDetxt p{
-    padding: 0.5rem;;
+/* Párrafos dentro del contenido informativo con padding y tamaño legible */
+.cards-informative .cardDetxt p {
+    padding: 0.5rem;
     font-size: 0.9rem;
     text-align: center;
     justify-content: center;
     align-items: center;
-    
 }
 
-.card img{
+/* Imagen dentro de tarjetas con tamaño fijo y centrado */
+.card img {
     width: 10rem;
     height: 10rem;
     align-items: center;
 }
-/* ------------------- Footer ------------------- */
+
+/* =========================
+   FOOTER
+   ========================= */
+
+/* Estilo general del footer: fondo oscuro, texto blanco y padding */
 .footer {
     background-color: #111;
     color: #fff;
     padding: 2rem 1rem;
-    
     font-size: 0.95rem;
 }
 
+/* Contenedor interno del footer con flexbox, espacio entre elementos y límites de ancho */
 .footer-content {
     display: flex;
     flex-wrap: wrap;
@@ -199,38 +246,45 @@ body {
     margin: auto;
 }
 
+/* Secciones internas del footer con tamaño flexible */
 .footer .about,
 .footer .contact,
 .footer .section-links {
     flex: 1 1 250px;
 }
 
+/* Estilo para títulos del footer con color azul y margen inferior */
 .footer h3,
 .footer h4 {
     color: #00cfff;
     margin-bottom: 1rem;
 }
 
+/* Lista sin estilo dentro de sección de enlaces */
 .footer .section-links ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
+/* Espaciado entre elementos de la lista */
 .footer .section-links ul li {
     margin-bottom: 0.5rem;
 }
 
+/* Enlaces dentro del footer: color gris claro y sin subrayado, con transición suave */
 .footer .section-links ul li a {
     color: #ccc;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
+/* Color azul para enlaces al pasar el cursor */
 .footer .section-links ul li a:hover {
     color: #00cfff;
 }
 
+/* Texto inferior del footer con borde superior y color gris */
 .footer-bottom {
     text-align: center;
     padding-top: 1rem;
@@ -240,18 +294,26 @@ body {
     color: #aaa;
 }
 
-/*____________________Seccion de ofertas__________________________*/
-.cards-oferts{
+/* =========================
+   SECCIÓN OFERTAS
+   ========================= */
+
+/* Contenedor principal de ofertas con texto centrado, tamaño y color */
+.cards-oferts {
     text-align: center;
     font-size: 2rem;
     color: black;
 }
 
-.cards-oferts h2{
+/* Título h2 dentro de ofertas con fondo claro y animación */
+.cards-oferts h2 {
     flex: auto;
     background: #f9f9f9;
+    animation: slideIn 3s ease-out;
 }
-.cards-oferts .cards{
+
+/* Contenedor de tarjetas en ofertas con grid, espacio y animación */
+.cards-oferts .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
@@ -259,14 +321,19 @@ body {
     background: #f9f9f9;
     transition: transform 0.3s;
     color: black;
+    animation: slideUp 3s ease-out;
 }
-.cards-oferts .cards:hover{
+
+/* Zoom al pasar el cursor sobre las tarjetas en ofertas */
+.cards-oferts .cards:hover {
     transform: scale(1.05);
 }
 
-/*-------------------------------Productos-------------------------*/
-/* Contenedor principal */
-/* ====== Barra de búsqueda ====== */
+/* =========================
+   BARRA DE BÚSQUEDA
+   ========================= */
+
+/* Contenedor de la barra de búsqueda con flex, centrado, sombra y animación */
 .Barra_de_busqueda {
     display: flex;
     justify-content: center;
@@ -276,33 +343,36 @@ body {
     background: #f9f9f9;
     padding: 0.5rem;
     border-radius: 2rem;
-    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     width: fit-content;
     animation: slideIn 1.5s ease-out;
 }
-/* Input y lupa */
+
+/* Contenedor interno para icono y campo de texto */
 .contenedor-texto {
     display: flex;
     align-items: center;
     gap: 10px;
     position: relative;
 }
-/* Input de búsqueda */
+
+/* Input de búsqueda sin bordes ni fondo, con transición de ancho */
 .contenedor-texto input {
     background: transparent;
     border: none;
     outline: none;
-    color:  black;
+    color: black;
     font-size: 16px;
     width: 160px;
     transition: width 0.5s ease;
 }
 
+/* Input se expande al hacer foco */
 .contenedor-texto input[type="text"]:focus {
     width: 220px;
 }
 
-/* Botón de Enter */
+/* Botón de búsqueda con fondo negro, texto blanco, borde redondeado y transición */
 .Enter {
     background: black;
     color: white;
@@ -312,15 +382,197 @@ body {
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
+/* Efecto hover para el botón de búsqueda */
 .Enter:hover {
     background: #5b5a5a;
     transform: scale(1.05);
 }
 
-/* Animación de entrada */
-@keyframes slideIn {
+/* =========================
+   PRODUCTOS Y PRECIOS
+   ========================= */
+
+/* Contenedor principal de productos con fondo claro */
+#productos {
+    background: #f9f9f9;
+}
+
+/* Sección de tarjetas de productos con padding, fondo y animación */
+.cards-products {
+    padding: 3rem;
+    background: #f9f9f9;
+    animation: slideIn 3s ease-out;
+}
+
+/* Título principal de productos centrado y con estilo */
+.cards-products h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: black;
+}
+
+/* Grid para primera fila de tarjetas de productos */
+.cards1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* Estilo individual para cada tarjeta de producto */
+.cardd {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+    color: black;
+}
+
+/* Zoom al pasar cursor sobre tarjeta de producto */
+.cardd:hover {
+    transform: scale(1.05);
+}
+
+/* Imagen dentro de la tarjeta con tamaño fijo */
+.cardd img {
+    width: 10rem;
+    height: 10rem;
+    align-items: center;
+}
+
+/* Título dentro de la tarjeta de producto */
+.cardd h3 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+/* Texto dentro de la tarjeta de producto con padding */
+.cardd p {
+    padding: 0 1rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* Texto justificado para párrafos con id "texto" */
+#texto {
+    text-align: justify;
+}
+
+/* Grid para segunda fila de tarjetas de productos */
+.cards2 {
+    display: grid;
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+
+/* Estilo para las tarjetas dentro de la segunda fila con padding y animación */
+.cards2 .cardd {
+    padding: 3rem;
+    animation: slidelft 5s ease-out;
+}
+
+/* Animación principal para el contenedor con id "inicioMain" */
+#inicioMain {
+    animation: slideUp 5s ease-out;
+}
+
+/* =========================
+   Acerca de
+   ========================= */
+.Informacion h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 2rem;
+    position: relative;
+    animation: slidergh 3s ease-out;
+    
+}
+
+/* Línea decorativa debajo del título */
+.Informacion h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: gray;
+    margin: 0.1rem auto 0;
+    border-radius: 10px;
+    animation: slidelft 2s ease-out;
+    
+}
+
+/*================= Contenedor del Texto =================*/
+.contenedorInformacion {
+    display: flex;
+    font-size: 1.1rem;
+    
+    color: #444;
+    text-align: justify;
+    
+    padding: 3rem;
+    animation: slideUp  2s ease-out;
+    
+}
+
+/*================= Imagen de Ubicación =================*/
+.ubicacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ubicacion img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease;
+}
+
+/* Efecto al pasar el cursor sobre la imagen */
+.ubicacion img:hover {
+    transform: scale(1.03);
+}
+
+
+.redes-sociales {
+    padding: 2rem;
+    text-align: center;
+}
+
+.redes-sociales h3 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+/* ---------------------- Íconos ---------------------- */
+.redes-sociales a {
+    
+    display: inline-block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.redes-sociales a:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.redes-sociales img {
+    width: 60px;
+    height: 60px;
+}
+
+/* =========================
+   ANIMACIONES (KEYFRAMES)
+   ========================= */
+
+/* Animación para que los elementos entren desde la izquierda con fade-in */
+@keyframes slidelft {
     from {
-        transform: translateY(-50px);
+        transform: translatex(-100px);
         opacity: 0;
     }
     to {
@@ -329,80 +581,34 @@ body {
     }
 }
 
-/*---------------------Productos y precios.------------------------*/
-#productos{
-    background: #f9f9f9;
-
-}
-/*Seccion de tarjetas*/
-.cards-products{
-    padding: 3rem;
-    background: #f9f9f9;
-    animation: slideIn 3s ease-out;
-}
-.cards-products h2{
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
-    color: black;
-}
-.cards1{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    padding-bottom: 3rem;
-}
-.cardd{
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.3s;
-    color: black;
-
-}
-
-.cardd:hover{
-    transform: scale(1.05);
-}
-
-.cardd img{
-    width: 10rem;
-    height: 10rem;
-    align-items: center;
-}
-
-.cardd h3{
-    margin: 1rem 0;
-    font-size: 1.5rem;
-}
-
-.cardd p{
-    padding: 0 1rem 1rem;
-    font-size: 0.9rem;
-}
-
-#texto{
-    text-align: justify;
-}
-
-.cards2{
-    
-    display: grid;
-    gap: 2rem;
-    padding-bottom: 3rem;
-}
-
-.cards2 .cardd{
-    padding: 3rem;
-    animation: slidelft 5s ease-out;
-
-}
-/* Animación de entrada */
-@keyframes slidelft {
+/* Animación para que los elementos entren desde la derecha con fade-in */
+@keyframes slidergh {
     from {
-        transform: translatex(-75px);
+        transform: translatex(+100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Animación para que los elementos suban con fade-in */
+@keyframes slideUp {
+    from {
+        transform: translateY(+100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Animación para que los elementos bajen con fade-in */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100px);
         opacity: 0;
     }
     to {
