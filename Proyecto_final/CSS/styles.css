@@ -1,0 +1,236 @@
+/* Selecciona todos los elementos */
+* {
+    margin: 0;           /* Elimina margen predeterminado para todos los elementos */
+    padding: 0;          /* Elimina padding predeterminado para todos los elementos */
+    box-sizing: border-box; /* Hace que el padding y borde se incluyan dentro del tamaño total del elemento */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Define la fuente de texto para toda la página */
+    line-height: 1.6;               /* Altura de línea para mejorar la legibilidad del texto */
+    color: #333;                    /* Color del texto en un gris oscuro */
+    background: white;              /* Color de fondo blanco para la página */
+}
+
+/*-------------------Barra de navegacion----------------------------*/
+.Barra_de_navegacion {
+    display: flex;
+    position: sticky;                   /* Activa flexbox para alinear hijos en fila */
+    justify-content: space-between; /* Distribuye los elementos hijos con espacio entre ellos */
+    align-items: center;             /* Centra verticalmente los elementos dentro de la barra */
+    padding: 1rem 2rem;              /* Espacio interno: 1 rem arriba/abajo, 2 rem izquierda/derecha */
+    background: black;               /* Fondo negro para la barra */
+    color: white;                   /* Texto blanco dentro de la barra */              /* Hace que la barra se quede fija en la parte superior al hacer scroll */
+    top: 0;                        /* Posiciona la barra en la parte superior de la ventana */
+    z-index: 1000;                 /* Prioridad alta para que quede encima de otros elementos */
+}
+
+/* Estilo para el logo dentro de la barra de navegación */
+.Barra_de_navegacion .logo {
+    font-size: 1.5rem;     /* Tamaño de fuente más grande para destacar el logo */
+    font-weight: bold;     /* Fuente en negrita */
+    color: whitesmoke;          /* Color blanco para el texto del logo */
+}
+
+/* Estilo para la lista de botones dentro de la barra */
+.Barra_de_navegacion .botones {
+    list-style: none;      /* Quita los puntos o números de la lista */
+    color: white;          /* Color blanco para el texto */
+    display: flex;         /* Muestra los botones en línea (flex) */
+    gap: 1rem;             /* Espacio de 1 rem entre cada botón */
+}
+
+/* Estilo para los enlaces dentro de los botones */
+.botones a {
+    text-decoration: none;     /* Quita el subrayado de los enlaces */
+    color: white;              /* Color blanco por defecto */
+    transition: color 0.3s;    /* Animación suave al cambiar el color */
+}
+
+/* Cambio de color cuando pasas el cursor sobre los enlaces */
+.botones a:hover {
+    color: aqua;               /* Cambia el color del texto a aqua */
+}
+
+
+.hero-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    background: lightgrey no-repeat center/cover;
+    color: black;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-section h1{
+    font-size: 3.5rem;
+    margin-bottom: 0.1rem;
+    text-decoration: solid;
+    
+}
+.hero-section h3{
+    color: #5b5a5a;
+    margin-bottom: 3rem;
+    text-decoration: solid;
+    
+}
+
+.hero-section p{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    
+}
+
+.btn-primary {
+    background: black;
+    color: white;
+    padding: 0.8rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.6);
+}
+
+.btn-primary:hover{
+    background: #333;
+    transform: translateY(-3px);
+}
+
+/*Seccion de tarjetas*/
+.cards-container{
+    padding: 3rem;
+    background: #f9f9f9;
+}
+.cards-container h2{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: black;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+.card{
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+    color: black;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card h3{
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.card p{
+    padding: 0 1rem 1rem;
+    font-size: 0.9rem;
+}
+/*Seccion de las cartas informativasc de la empresa*/
+.cards-informative{
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    background-color: white;
+    margin: 5rem;
+    gap: 1rem;
+    border-radius: 9rem;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    transition: .3s all ease;
+    padding: 3rem
+    
+}
+.cards-informative:hover{
+    flex: 2;
+    transform: scale(1.1, 1.1 );
+
+}
+.cards-informative h2{
+    text-align: center;
+    font-size: 2rem;
+    color: black;
+}
+.cards-informative .cardDetxt{
+    text-align: center;
+    color: black;
+    
+
+}
+
+.cards-informative .cardDetxt p{
+    padding: 0 0.5rem 0.5rem;
+    font-size: 0.9rem;
+    text-align: justify;
+}
+/* ------------------- Footer ------------------- */
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 2rem 1rem;
+    
+    font-size: 0.95rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer .about,
+.footer .contact,
+.footer .section-links {
+    flex: 1 1 250px;
+}
+
+.footer h3,
+.footer h4 {
+    color: #00cfff;
+    margin-bottom: 1rem;
+}
+
+.footer .section-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer .section-links ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer .section-links ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer .section-links ul li a:hover {
+    color: #00cfff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid #444;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: #aaa;
+}

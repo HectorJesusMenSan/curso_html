@@ -1,0 +1,54 @@
+body{
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Boton Normal*/
+.miBoton{
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 10px;
+}
+/*Hover*/
+.miBoton:hover{
+    background-color: #0056b3;
+}
+/*Active*/
+.miBoton:active{
+    background-color: #003d80;
+}
+
+/*Imput normal*/
+.miInput{
+    display: block;
+    margin-top: 20px;
+    padding: 8px;
+    border: 2px solid #ccc;
+    transition: border-color 0.3s;
+}
+.miImput:focus{
+    border-color: green;
+    outline: none;
+}
+#texto {
+  color: black;
+  font-weight: normal;
+  transition: color 0.3s, font-weight 0.3s;
+}
+/*Checked*/
+.miCheckbox:checked + #texto {
+  color: greenyellow;
+  font-weight: bold;
+  transition: color 0.3s, font-weight 0.3s;
+}
+/*Disabled*/
+.miInput2:disabled{
+    background-color: #eee;
+    color: #999;
+    border-color: #ccc;
+    cursor: not-allowed;
+}
