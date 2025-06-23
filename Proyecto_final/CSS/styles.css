@@ -142,39 +142,44 @@ body {
 }
 /*Seccion de las cartas informativasc de la empresa*/
 .cards-informative{
-    display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     background-color: white;
     margin: 5rem;
-    gap: 1rem;
-    border-radius: 9rem;
+    border-radius: 5rem;
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
-    flex: 1;
     transition: .3s all ease;
     padding: 3rem
+
     
 }
 .cards-informative:hover{
     flex: 2;
     transform: scale(1.1, 1.1 );
-
 }
 .cards-informative h2{
     text-align: center;
     font-size: 2rem;
     color: black;
+    padding: 0.5rem;
 }
 .cards-informative .cardDetxt{
+    align-items: center;
     text-align: center;
     color: black;
-    
-
 }
 
 .cards-informative .cardDetxt p{
-    padding: 0 0.5rem 0.5rem;
+    padding: 0.5rem;;
     font-size: 0.9rem;
-    text-align: justify;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card img{
+    width: 10rem;
+    height: 10rem;
+    align-items: center;
 }
 /* ------------------- Footer ------------------- */
 .footer {
@@ -233,4 +238,175 @@ body {
     margin-top: 2rem;
     font-size: 0.85rem;
     color: #aaa;
+}
+
+/*____________________Seccion de ofertas__________________________*/
+.cards-oferts{
+    text-align: center;
+    font-size: 2rem;
+    color: black;
+}
+
+.cards-oferts h2{
+    flex: auto;
+    background: #f9f9f9;
+}
+.cards-oferts .cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding-bottom: 3rem;
+    background: #f9f9f9;
+    transition: transform 0.3s;
+    color: black;
+}
+.cards-oferts .cards:hover{
+    transform: scale(1.05);
+}
+
+/*-------------------------------Productos-------------------------*/
+/* Contenedor principal */
+/* ====== Barra de búsqueda ====== */
+.Barra_de_busqueda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    gap: 10px;
+    background: #f9f9f9;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    width: fit-content;
+    animation: slideIn 1.5s ease-out;
+}
+/* Input y lupa */
+.contenedor-texto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+/* Input de búsqueda */
+.contenedor-texto input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color:  black;
+    font-size: 16px;
+    width: 160px;
+    transition: width 0.5s ease;
+}
+
+.contenedor-texto input[type="text"]:focus {
+    width: 220px;
+}
+
+/* Botón de Enter */
+.Enter {
+    background: black;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.Enter:hover {
+    background: #5b5a5a;
+    transform: scale(1.05);
+}
+
+/* Animación de entrada */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*---------------------Productos y precios.------------------------*/
+#productos{
+    background: #f9f9f9;
+
+}
+/*Seccion de tarjetas*/
+.cards-products{
+    padding: 3rem;
+    background: #f9f9f9;
+    animation: slideIn 3s ease-out;
+}
+.cards-products h2{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: black;
+}
+.cards1{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+.cardd{
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+    color: black;
+
+}
+
+.cardd:hover{
+    transform: scale(1.05);
+}
+
+.cardd img{
+    width: 10rem;
+    height: 10rem;
+    align-items: center;
+}
+
+.cardd h3{
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.cardd p{
+    padding: 0 1rem 1rem;
+    font-size: 0.9rem;
+}
+
+#texto{
+    text-align: justify;
+}
+
+.cards2{
+    
+    display: grid;
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+
+.cards2 .cardd{
+    padding: 3rem;
+    animation: slidelft 5s ease-out;
+
+}
+/* Animación de entrada */
+@keyframes slidelft {
+    from {
+        transform: translatex(-75px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

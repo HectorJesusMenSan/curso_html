@@ -13,5 +13,9 @@ function cargarComponente(idElemento, rutaArchivo) {
 
 // Esperar a que el DOM esté listo
 document.addEventListener("DOMContentLoaded", () => {
-  cargarComponente("navbar", "components/nav_bar.html");
+  cargarComponente("navbar", "../components/nav_bar.html");
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  cargarComponente("footer", "../components/footer.html");
 });
